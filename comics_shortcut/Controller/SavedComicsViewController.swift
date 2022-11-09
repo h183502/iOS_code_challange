@@ -5,7 +5,10 @@
 //  Created by Heine Fjeldberg on 09/11/2022.
 //
 
-/*import UIKit
+
+ //The intention with this tableViewController was to populate it with saved comics from the FindComicsViewController.
+ 
+import UIKit
 import CoreData
 
 var comicList = [Comic]()
@@ -31,4 +34,4 @@ class SavedComicViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
     }
-}*/
+}

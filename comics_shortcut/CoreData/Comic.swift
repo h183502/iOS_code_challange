@@ -10,6 +10,6 @@ import CoreData
 @objc(Comic)
 class Comic: NSManagedObject
 {
-    @NSManaged var id: NSNumber
-    @NSManaged var title: String?
+    @NSManaged var id: NSNumber!
+    @NSManaged var title: String!
 }

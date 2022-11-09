@@ -14,9 +14,11 @@ protocol ComicManagerDelegate {
 }
 
 struct ComicManager {
+    
     let latestComicURL = "https://xkcd.com/info.0.json"
     
     var delegate: ComicManagerDelegate?
+    
     
     func fetchLatestComic() {
         let urlString = latestComicURL
@@ -27,6 +29,8 @@ struct ComicManager {
         let urlString = "https://xkcd.com/\(number)/info.0.json"
         performRequest(with: urlString)
     }
+    
+    // Retrieves the data from the API and parses the data to desired format
     
     func performRequest(with urlString: String) {
         if let url = URL(string: urlString) {
@@ -49,6 +53,8 @@ struct ComicManager {
         }
     }
     
+    // takes a DataObjekt returned by the api and returns it as a ComicModel
+    
     func parseJSON(_ comicData: Data) -> ComicModel? {
         let decoder = JSONDecoder()
         do {
@@ -65,6 +71,8 @@ struct ComicManager {
             return nil
         }
     }
+    
+    // converts the image retrieved from the API to a UIImage
     
     func getImage(from string: String) -> UIImage? {
         guard let url = URL(string: string)

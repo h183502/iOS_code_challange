@@ -50,7 +50,7 @@
                                     <color key="baseForegroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="YPY-uZ-JaV" kind="show" id="Blx-fr-VGK"/>
+                                    <segue destination="7yF-rD-qdU" kind="show" id="N08-h0-Uz2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -176,51 +176,53 @@
                         <outlet property="comicTitleLabel" destination="B17-tN-CVz" id="xvV-Hm-0wJ"/>
                         <outlet property="getComicButton" destination="Gb6-LC-Duy" id="e7w-pj-3fo"/>
                         <outlet property="getLatesComicButton" destination="iId-Jv-fga" id="8Pq-8C-qog"/>
-                        <outlet property="saveComicButton" destination="bX3-t0-KrY" id="wvJ-ZH-TGs"/>
                         <outlet property="searchTextField" destination="4bM-hx-L4m" id="82X-59-iRI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYb-rU-n64" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2935.1145038167938" y="-406.33802816901408"/>
+            <point key="canvasLocation" x="1885" y="-430"/>
         </scene>
-        <!--Saved View Controller-->
-        <scene sceneID="YZK-Kp-f5M">
+        <!--Saved Comic View Controller-->
+        <scene sceneID="11k-2h-gOC">
             <objects>
-                <viewController id="YPY-uZ-JaV" userLabel="Saved View Controller" customClass="SavedComicViewController" customModule="comics_shortcut" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="URr-tE-uXm">
+                <tableViewController id="7yF-rD-qdU" customClass="SavedComicViewController" customModule="comics_shortcut" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Qp5-0V-TRt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="comicCellId" rowHeight="83" translatesAutoresizingMaskIntoConstraints="NO" id="uN7-fp-CgJ" customClass="ComicCell" customModule="comics_shortcut" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="182" width="393" height="83"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="comicCellId" id="PqB-ts-ejx" customClass="ComicCell" customModule="comics_shortcut">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uN7-fp-CgJ" id="S3f-sw-gkU" customClass="ComicCell" customModule="comics_shortcut" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="83"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PqB-ts-ejx" id="yhr-RL-lxC">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odl-zS-xoP">
-                                            <rect key="frame" x="33" y="12" width="326" height="58"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Unu-gk-TzN">
+                                            <rect key="frame" x="96" y="11" width="200" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLable" destination="Unu-gk-TzN" id="Lat-ZY-HNN"/>
+                                </connections>
                             </tableViewCell>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="0FP-0N-EyT"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="z78-ha-i7h"/>
-                    <connections>
-                        <outlet property="titleLable" destination="odl-zS-xoP" id="rND-Da-m4B"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EDu-D5-DCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7yF-rD-qdU" id="UaP-O3-rHi"/>
+                            <outlet property="delegate" destination="7yF-rD-qdU" id="IZF-LP-gTd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="PAp-CU-jxI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mqi-YP-yWY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2058.7786259541986" y="314.78873239436621"/>
+            <point key="canvasLocation" x="1886" y="315"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2Nm-1W-jUW">

@@ -6,7 +6,8 @@
 //
 
 import UIKit
+import CoreData
 
 class ComicCell: UITableViewCell {
-    
+    @IBOutlet weak var titleLabel: UILabel!
 }

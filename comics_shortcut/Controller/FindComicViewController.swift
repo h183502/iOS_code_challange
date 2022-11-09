@@ -17,16 +17,6 @@ class FindComicViewController: UIViewController {
     @IBOutlet weak var comicImageView: UIImageView!
     @IBOutlet weak var saveComicButton: UIButton!
     
-    
-    /*let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-   */
-    //var container: NSPersistentContainer!
-    
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let nextVC = segue.destination as? SavedComicViewController {
-            nextVC.container = container
-        }
-    }*/
     var comicManager = ComicManager()
     
     override func viewDidLoad() {
@@ -37,7 +27,7 @@ class FindComicViewController: UIViewController {
     }
 }
 
-//MARK: - UITextFieldDelegate
+//MARK: - UITextFieldDelegate - handling the user input from the textfield
 
 extension FindComicViewController: UITextFieldDelegate {
     @IBAction func getLatesComic(_ sender: UIButton) {
@@ -66,7 +56,7 @@ extension FindComicViewController: UITextFieldDelegate {
     }
 }
 
-//MARK: - ComicManagerDelegate
+//MARK: - ComicManagerDelegate - updating the view with the retrived data from the API
 
 extension FindComicViewController: ComicManagerDelegate {
     
@@ -88,12 +78,16 @@ extension FindComicViewController: ComicManagerDelegate {
 
 extension FindComicViewController {
     
-    /*func convertImage(img: UIImage) {
+    /*
+     func convertImage(img: UIImage) {
         let pngImageData = img.pngData()
         let entity = NSEntityDescription.entity(forEntityName: "ComicCoreModel", in: )
     }*/
     
-    /*@IBAction func saveComicsPressed(_ sender: UIButton) {
+    
+    // The intention here was to persist the current data to the savedComicViewController by clicking the saveComicsPressed button
+     
+     @IBAction func saveComicsPressed(_ sender: UIButton) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Comic", in: context)
@@ -109,6 +103,6 @@ extension FindComicViewController {
             print("Context save error")
         }
         
-    }*/
+    }
 }
     
