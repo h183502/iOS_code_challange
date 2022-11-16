@@ -10,7 +10,7 @@ import UIKit
 
 struct ComicModel {
     let title: String
-    let num: Int
+    let num: String
     let img: UIImage
     
 }

@@ -10,4 +10,5 @@ import CoreData
 
 class ComicCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var comicNumberLabel: UILabel!
 }

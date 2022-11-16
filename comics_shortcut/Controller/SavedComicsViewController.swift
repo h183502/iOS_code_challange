@@ -15,6 +15,26 @@ var comicList = [Comic]()
 
 class SavedComicViewController: UITableViewController {
     
+    var firstLoad = true
+    
+    override func viewDidLoad() {
+        //if (firstLoad) {
+        //    firstLoad = false
+        //    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        //    let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        //    let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Comic")
+        //    do {
+        //        let results: NSArray = try context.fetch(request) as NSArray
+        //        for result in results {
+        //            let comic = result as! Comic
+        //            comicList.append(comic)
+        //        }
+        //    } catch {
+        //        print("fetch failed")
+        //    }
+        //}
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let comicCell = tableView.dequeueReusableCell(withIdentifier: "comicCellId", for: indexPath) as! ComicCell
@@ -23,6 +43,7 @@ class SavedComicViewController: UITableViewController {
         thisComic = comicList[indexPath.row]
         
         comicCell.titleLabel.text = thisComic.title
+        comicCell.comicNumberLabel.text = thisComic.comicNumber
         
         return comicCell
     }
@@ -33,5 +54,22 @@ class SavedComicViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showComic", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showComic") {
+            let indexPath = tableView.indexPathForSelectedRow!
+            
+            let comicDetail = segue.destination as? ComicDetailController
+            
+            let selectedComic : Comic!
+            selectedComic = comicList[indexPath.row]
+            comicDetail!.selectedComic = selectedComic
+            
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
     }
 }

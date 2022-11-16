@@ -60,7 +60,7 @@ struct ComicManager {
         do {
             let decodedData = try decoder.decode(ComicData.self, from: comicData)
             let title = decodedData.title
-            let num = decodedData.num
+            let num = String(decodedData.num)
             let img = decodedData.img
             let image = getImage(from: img)
             

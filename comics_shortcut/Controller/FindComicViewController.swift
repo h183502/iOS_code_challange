@@ -14,6 +14,7 @@ class FindComicViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var getComicButton: UIButton!
     @IBOutlet weak var comicTitleLabel: UILabel!
+    @IBOutlet weak var comicNumberLabel: UILabel!
     @IBOutlet weak var comicImageView: UIImageView!
     @IBOutlet weak var saveComicButton: UIButton!
     
@@ -63,6 +64,7 @@ extension FindComicViewController: ComicManagerDelegate {
     func didUpdateComic(_ comicManager: ComicManager, comic: ComicModel) {
         DispatchQueue.main.async {
             self.comicTitleLabel.text  = comic.title
+            self.comicNumberLabel.text = "#\(comic.num)"
             self.comicImageView.image = comic.img
         }
     }
@@ -94,6 +96,7 @@ extension FindComicViewController {
         let newComic = Comic(entity: entity!, insertInto: context)
         newComic.id = comicList.count as NSNumber
         newComic.title = comicTitleLabel.text
+        newComic.comicNumber = comicNumberLabel.text
         //newComic.img = comicImageView
         do {
             try context.save()

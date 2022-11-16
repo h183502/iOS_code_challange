@@ -12,4 +12,5 @@ class Comic: NSManagedObject
 {
     @NSManaged var id: NSNumber!
     @NSManaged var title: String!
+    @NSManaged var comicNumber: String!
 }
