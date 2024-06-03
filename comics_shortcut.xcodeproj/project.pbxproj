@@ -22,6 +22,7 @@
 		618A4615291C20D800F4D0DF /* Comics.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 618A4613291C20D800F4D0DF /* Comics.xcdatamodeld */; };
 		618A4617291C248A00F4D0DF /* ComicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618A4616291C248A00F4D0DF /* ComicCell.swift */; };
 		618A461D2924F1D000F4D0DF /* ComicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618A461C2924F1D000F4D0DF /* ComicDetailViewController.swift */; };
+		61BBDB6B2C07AA1500A05E1B /* ComicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BBDB6A2C07AA1400A05E1B /* ComicTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		618A4614291C20D800F4D0DF /* Comics.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Comics.xcdatamodel; sourceTree = "<group>"; };
 		618A4616291C248A00F4D0DF /* ComicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicCell.swift; sourceTree = "<group>"; };
 		618A461C2924F1D000F4D0DF /* ComicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailViewController.swift; sourceTree = "<group>"; };
+		61BBDB6A2C07AA1400A05E1B /* ComicTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		617805C52C0A040300F73EBF /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				61BBDB6A2C07AA1400A05E1B /* ComicTest.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		618A45CD291B8F2400F4D0DF = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 				618A45E4291B8F2C00F4D0DF /* LaunchScreen.storyboard */,
 				618A45E7291B8F2C00F4D0DF /* Info.plist */,
 				618A4618291C24A700F4D0DF /* CoreData */,
+				617805C52C0A040300F73EBF /* Tests */,
 			);
 			path = comics_shortcut;
 			sourceTree = "<group>";
@@ -201,6 +212,7 @@
 				618A45DA291B8F2400F4D0DF /* AppDelegate.swift in Sources */,
 				618A4610291C139E00F4D0DF /* Comic.swift in Sources */,
 				618A4617291C248A00F4D0DF /* ComicCell.swift in Sources */,
+				61BBDB6B2C07AA1500A05E1B /* ComicTest.swift in Sources */,
 				618A4615291C20D800F4D0DF /* Comics.xcdatamodeld in Sources */,
 				618A45DC291B8F2400F4D0DF /* SceneDelegate.swift in Sources */,
 				618A45FB291B9A3B00F4D0DF /* FindComicViewController.swift in Sources */,
